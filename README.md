@@ -5,7 +5,15 @@ This project involves cleaning and analyzing the Zomato restaurant dataset for B
 
 ---
 
+## 📥 Dataset
+Due to file size limitations, the full `zomato.csv` dataset is hosted externally:  
+[Download from Google Drive](https://drive.google.com/file/d/1rfLiRlYwqN9GfDCl3vhpPIa4jB1gFwCE/view?usp=sharing)
+
+---
+
 ## 🧹 1. Data Cleaning Summary
+
+📓 The notebook used for this step: **`Zomato Data Cleaning.ipynb`**
 
 ### 🎯 Objective
 To clean and preprocess the Zomato Bangalore dataset by handling missing values, fixing duplicates, correcting data types, and consolidating multi-row entries.
@@ -23,7 +31,7 @@ To clean and preprocess the Zomato Bangalore dataset by handling missing values,
    - Removed `phone`, `menu_item`, and `dish_liked` due to high null counts or low relevance.
 
 4. **Rating Imputation**
-   - Cleaned `rate` column, extracted ratings from `reviews_list`, and filled missing values using grouped means (by `url`, `name`, `rest_type`), finishing with global mean.
+   - Cleaned `rate` column, extracted ratings from `reviews_list` to fill some null values in `rate` column.
 
 5. **Cost for Two**
    - Renamed, cleaned, and converted the column. Missing values filled based on restaurant type averages.
@@ -43,12 +51,16 @@ To clean and preprocess the Zomato Bangalore dataset by handling missing values,
 
 ✅ Final Result:
 - No nulls or duplicates.
-- All columns cleaned and properly typed.
+- All columns cleaned with appropriate formats.
 - Dataset ready for EDA and modeling.
+
+📂 The cleaned dataset generated after Data cleaning process: **`Fully Cleaned Zomato Data.csv`**
 
 ---
 
 ## 📊 2. Exploratory Data Analysis Summary
+
+📓 The notebook used for this step: **`Zomato Cleaned Data EDA.ipynb`**
 
 ### 📋 Overview
 - Confirmed 12,453 unique restaurants and 8,758 unique names.
